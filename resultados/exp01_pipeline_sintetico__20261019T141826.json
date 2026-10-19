@@ -1,0 +1,1455 @@
+{
+  "experimento": "exp01_pipeline_sintetico",
+  "executado_em": "2026-10-19T14:18:26-03:00",
+  "comando": "python -m experimentos.exp01_pipeline_sintetico",
+  "git": {
+    "commit": "606c6fee773170f81fe1aaefc6a8dd3342838169",
+    "branch": "main",
+    "sujo": false,
+    "arquivos_nao_commitados": []
+  },
+  "versoes": {
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "plataforma": "Windows-11-10.0.26300-SP0"
+  },
+  "dados": {
+    "sha256": "e43893f8e5e49cdf781b3e979ec8fae97c8a3297b8ecb2426769ab9fe5bcaa40",
+    "n_arquivos": 79,
+    "caminhos": [
+      "D:\\projects\\Mestrado\\dados\\sintetico"
+    ]
+  },
+  "execucao_numero_para_estes_dados": 2,
+  "vale_como_fora_da_amostra": false,
+  "avisos": [],
+  "resultado": {
+    "proposto": {
+      "metodo": "proposto",
+      "n_jobs": 16,
+      "anomalia_precisao": 0.9397590361445783,
+      "anomalia_revocacao": 1.0,
+      "anomalia_f1": 0.9689440993788819,
+      "pureza_media": 0.9333333333333333,
+      "acuracia_causa": 1.0,
+      "acuracia_causa_com_anomalia": 1.0,
+      "taxa_viavel": 1.0,
+      "taxa_resolve": 1.0,
+      "taxa_explicacao_completa": 1.0,
+      "taxa_tradeoffs": 1.0,
+      "delta_tempo_medio_pct": 31.11125,
+      "por_job": [
+        {
+          "job": "job_009",
+          "anomalia_f1_job": 0.9600000000000001,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_010",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 77.78,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_011",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_012",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_013",
+          "anomalia_f1_job": 0.923076923076923,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": "aba",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_014",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": "aba",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_015",
+          "anomalia_f1_job": 0.8571428571428571,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": "aba",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_016",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_017",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_018",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_019",
+          "anomalia_f1_job": 0.9600000000000001,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 77.78,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_020",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 33.33,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_021",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_022",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_023",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_024",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        }
+      ],
+      "contratos_violados": 0,
+      "detalhe_contratos_violados": [],
+      "grafo_proveniencia_pct": 100.0,
+      "grafo_cobertura_pct": 100.0
+    },
+    "baseline_limiar": {
+      "metodo": "baseline_limiar",
+      "n_jobs": 16,
+      "anomalia_precisao": 1.0,
+      "anomalia_revocacao": 0.9871794871794872,
+      "anomalia_f1": 0.9935483870967742,
+      "pureza_media": 0.9822916666666666,
+      "acuracia_causa": null,
+      "acuracia_causa_com_anomalia": null,
+      "taxa_viavel": null,
+      "taxa_resolve": null,
+      "taxa_explicacao_completa": null,
+      "taxa_tradeoffs": null,
+      "delta_tempo_medio_pct": null,
+      "por_job": [
+        {
+          "job": "job_009",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_010",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_011",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_012",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_013",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_014",
+          "anomalia_f1_job": 0.9090909090909091,
+          "pureza": 0.9666666666666667,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_015",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_016",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_017",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_018",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_019",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_020",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_021",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_022",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_023",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        },
+        {
+          "job": "job_024",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9833333333333333,
+          "janelas_descasadas": 0
+        }
+      ]
+    },
+    "baseline_geometrico": {
+      "metodo": "baseline_geometrico",
+      "n_jobs": 16,
+      "anomalia_precisao": 0.9397590361445783,
+      "anomalia_revocacao": 1.0,
+      "anomalia_f1": 0.9689440993788819,
+      "pureza_media": 0.9333333333333333,
+      "acuracia_causa": 0.8125,
+      "acuracia_causa_com_anomalia": 0.625,
+      "taxa_viavel": 1.0,
+      "taxa_resolve": 0.375,
+      "taxa_explicacao_completa": 1.0,
+      "taxa_tradeoffs": 1.0,
+      "delta_tempo_medio_pct": 20.0,
+      "por_job": [
+        {
+          "job": "job_009",
+          "anomalia_f1_job": 0.9600000000000001,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": -30.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_010",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 60.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_011",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_012",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_013",
+          "anomalia_f1_job": 0.923076923076923,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": "parede",
+          "causa_correta": false,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_014",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": "parede",
+          "causa_correta": false,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_015",
+          "anomalia_f1_job": 0.8571428571428571,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": "parede",
+          "causa_correta": false,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_016",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_017",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_018",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_019",
+          "anomalia_f1_job": 0.9600000000000001,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 60.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_020",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_021",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_022",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": -10.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_023",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_024",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        }
+      ]
+    },
+    "baseline_temporal": {
+      "metodo": "baseline_temporal",
+      "n_jobs": 16,
+      "anomalia_precisao": 0.9397590361445783,
+      "anomalia_revocacao": 1.0,
+      "anomalia_f1": 0.9689440993788819,
+      "pureza_media": 0.9333333333333333,
+      "acuracia_causa": 0.75,
+      "acuracia_causa_com_anomalia": 0.5,
+      "taxa_viavel": 1.0,
+      "taxa_resolve": 0.375,
+      "taxa_explicacao_completa": 1.0,
+      "taxa_tradeoffs": 1.0,
+      "delta_tempo_medio_pct": 20.0,
+      "por_job": [
+        {
+          "job": "job_009",
+          "anomalia_f1_job": 0.9600000000000001,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": null,
+          "causa_correta": false,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": -30.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_010",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 60.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_011",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_012",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_013",
+          "anomalia_f1_job": 0.923076923076923,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": null,
+          "causa_correta": false,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_014",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": "aba",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_015",
+          "anomalia_f1_job": 0.8571428571428571,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "aba",
+          "causa_prevista": null,
+          "causa_correta": false,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": true,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_016",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_017",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_018",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_019",
+          "anomalia_f1_job": 0.9600000000000001,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": null,
+          "causa_correta": false,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 60.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_020",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 20.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_021",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_022",
+          "anomalia_f1_job": 1.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": true,
+          "anomalia_detectada": true,
+          "causa_real": "parede",
+          "causa_prevista": "parede",
+          "causa_correta": true,
+          "tem_ajustes": true,
+          "viavel": true,
+          "resolve_violacoes": false,
+          "explicacao_completa": true,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": -10.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 1.0
+        },
+        {
+          "job": "job_023",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        },
+        {
+          "job": "job_024",
+          "anomalia_f1_job": 0.0,
+          "pureza": 0.9333333333333333,
+          "janelas_descasadas": 0,
+          "anomalia_real": false,
+          "anomalia_detectada": false,
+          "causa_real": null,
+          "causa_prevista": null,
+          "causa_correta": true,
+          "tem_ajustes": false,
+          "viavel": true,
+          "resolve_violacoes": null,
+          "explicacao_completa": null,
+          "tradeoffs_informados": true,
+          "delta_tempo_pct": 0.0,
+          "delta_material_pct": 0.0,
+          "delta_qualidade_pontos": 0.0
+        }
+      ]
+    },
+    "config": {
+      "largura_janela_s": 10.0,
+      "k": 4,
+      "semente": 0,
+      "fator_anomalia": 2.0,
+      "percentil_distancia": 99.0,
+      "n_desvios_baseline": 3.0,
+      "baseline_robusto": true,
+      "jobs_calibracao": [
+        "job_001",
+        "job_002",
+        "job_003",
+        "job_004",
+        "job_005",
+        "job_006",
+        "job_007",
+        "job_008"
+      ],
+      "jobs_avaliacao": [
+        "job_009",
+        "job_010",
+        "job_011",
+        "job_012",
+        "job_013",
+        "job_014",
+        "job_015",
+        "job_016",
+        "job_017",
+        "job_018",
+        "job_019",
+        "job_020",
+        "job_021",
+        "job_022",
+        "job_023",
+        "job_024"
+      ],
+      "modelo_regimes": {
+        "nomes_estado": {
+          "3": "aquecimento",
+          "1": "anomalia",
+          "0": "impressao",
+          "2": "impressao_2"
+        },
+        "estado_anomalia": 1,
+        "limiar_distancia": 3.9300958782925943
+      },
+      "limiar_baseline_vibracao": 0.015272898551247745
+    },
+    "explicacoes_proposto": {
+      "job_009": {
+        "causa": "parede",
+        "regras": [
+          "R2"
+        ],
+        "ajustes": [
+          {
+            "parametro": "resfriamento",
+            "de": 40.0,
+            "para": 60.0,
+            "regra_id": "R2"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 1.0
+        },
+        "passos": [
+          "job:job_009 -observado_como-> estado:job_009:4: estado 'anomalia' com anomalia entre 300 e 420 s [regimes/kmeans_janelas]",
+          "estado:job_009:4 -ocorre_durante-> operacao:job_009:op2_parede: sobreposicao de 120 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_009:op2_parede -imprime-> feature:suporte_L@v009:parede: a operacao imprime a feature 'parede' [sensores/meta:job_009]",
+          "feature:suporte_L@v009:parede -requer-> parametro:resfriamento: regra R2 exige resfriamento >= 60.0 [processo/regra:R2]",
+          "job:job_009 -usa_parametro-> parametro:resfriamento: o job usou resfriamento = 40.0 [sensores/meta:job_009]"
+        ]
+      },
+      "job_010": {
+        "causa": "parede",
+        "regras": [
+          "R1"
+        ],
+        "ajustes": [
+          {
+            "parametro": "velocidade",
+            "de": 80.0,
+            "para": 45.0,
+            "regra_id": "R1"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 77.78,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": [
+          "job:job_010 -observado_como-> estado:job_010:3: estado 'anomalia' com anomalia entre 300 e 420 s [regimes/kmeans_janelas]",
+          "estado:job_010:3 -ocorre_durante-> operacao:job_010:op2_parede: sobreposicao de 120 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_010:op2_parede -imprime-> feature:suporte_L@v010:parede: a operacao imprime a feature 'parede' [sensores/meta:job_010]",
+          "feature:suporte_L@v010:parede -requer-> parametro:velocidade: regra R1 exige velocidade <= 45.0 [processo/regra:R1]",
+          "job:job_010 -usa_parametro-> parametro:velocidade: o job usou velocidade = 80.0 [sensores/meta:job_010]"
+        ]
+      },
+      "job_011": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      },
+      "job_012": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      },
+      "job_013": {
+        "causa": "aba",
+        "regras": [
+          "R3"
+        ],
+        "ajustes": [
+          {
+            "parametro": "velocidade",
+            "de": 60.0,
+            "para": 50.0,
+            "regra_id": "R3"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 20.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": [
+          "job:job_013 -observado_como-> estado:job_013:4: estado 'anomalia' com anomalia entre 490 e 550 s [regimes/kmeans_janelas]",
+          "estado:job_013:4 -ocorre_durante-> operacao:job_013:op3_aba: sobreposicao de 60 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_013:op3_aba -imprime-> feature:suporte_L@v013:aba: a operacao imprime a feature 'aba' [sensores/meta:job_013]",
+          "feature:suporte_L@v013:aba -requer-> parametro:velocidade: regra R3 exige velocidade <= 50.0 [processo/regra:R3]",
+          "job:job_013 -usa_parametro-> parametro:velocidade: o job usou velocidade = 60.0 [sensores/meta:job_013]"
+        ]
+      },
+      "job_014": {
+        "causa": "aba",
+        "regras": [
+          "R3"
+        ],
+        "ajustes": [
+          {
+            "parametro": "velocidade",
+            "de": 60.0,
+            "para": 50.0,
+            "regra_id": "R3"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 20.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": [
+          "job:job_014 -observado_como-> estado:job_014:3: estado 'anomalia' com anomalia entre 490 e 550 s [regimes/kmeans_janelas]",
+          "estado:job_014:3 -ocorre_durante-> operacao:job_014:op3_aba: sobreposicao de 60 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_014:op3_aba -imprime-> feature:suporte_L@v014:aba: a operacao imprime a feature 'aba' [sensores/meta:job_014]",
+          "feature:suporte_L@v014:aba -requer-> parametro:velocidade: regra R3 exige velocidade <= 50.0 [processo/regra:R3]",
+          "job:job_014 -usa_parametro-> parametro:velocidade: o job usou velocidade = 60.0 [sensores/meta:job_014]"
+        ]
+      },
+      "job_015": {
+        "causa": "aba",
+        "regras": [
+          "R3"
+        ],
+        "ajustes": [
+          {
+            "parametro": "velocidade",
+            "de": 60.0,
+            "para": 50.0,
+            "regra_id": "R3"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 20.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": [
+          "job:job_015 -observado_como-> estado:job_015:4: estado 'anomalia' com anomalia entre 490 e 550 s [regimes/kmeans_janelas]",
+          "estado:job_015:4 -ocorre_durante-> operacao:job_015:op3_aba: sobreposicao de 60 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_015:op3_aba -imprime-> feature:suporte_L@v015:aba: a operacao imprime a feature 'aba' [sensores/meta:job_015]",
+          "feature:suporte_L@v015:aba -requer-> parametro:velocidade: regra R3 exige velocidade <= 50.0 [processo/regra:R3]",
+          "job:job_015 -usa_parametro-> parametro:velocidade: o job usou velocidade = 60.0 [sensores/meta:job_015]"
+        ]
+      },
+      "job_016": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      },
+      "job_017": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      },
+      "job_018": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      },
+      "job_019": {
+        "causa": "parede",
+        "regras": [
+          "R1"
+        ],
+        "ajustes": [
+          {
+            "parametro": "velocidade",
+            "de": 80.0,
+            "para": 45.0,
+            "regra_id": "R1"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 77.78,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": [
+          "job:job_019 -observado_como-> estado:job_019:4: estado 'anomalia' com anomalia entre 300 e 420 s [regimes/kmeans_janelas]",
+          "estado:job_019:4 -ocorre_durante-> operacao:job_019:op2_parede: sobreposicao de 120 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_019:op2_parede -imprime-> feature:suporte_L@v019:parede: a operacao imprime a feature 'parede' [sensores/meta:job_019]",
+          "feature:suporte_L@v019:parede -requer-> parametro:velocidade: regra R1 exige velocidade <= 45.0 [processo/regra:R1]",
+          "job:job_019 -usa_parametro-> parametro:velocidade: o job usou velocidade = 80.0 [sensores/meta:job_019]"
+        ]
+      },
+      "job_020": {
+        "causa": "parede",
+        "regras": [
+          "R1"
+        ],
+        "ajustes": [
+          {
+            "parametro": "velocidade",
+            "de": 60.0,
+            "para": 45.0,
+            "regra_id": "R1"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 33.33,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": [
+          "job:job_020 -observado_como-> estado:job_020:3: estado 'anomalia' com anomalia entre 300 e 420 s [regimes/kmeans_janelas]",
+          "estado:job_020:3 -ocorre_durante-> operacao:job_020:op2_parede: sobreposicao de 120 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_020:op2_parede -imprime-> feature:suporte_L@v020:parede: a operacao imprime a feature 'parede' [sensores/meta:job_020]",
+          "feature:suporte_L@v020:parede -requer-> parametro:velocidade: regra R1 exige velocidade <= 45.0 [processo/regra:R1]",
+          "job:job_020 -usa_parametro-> parametro:velocidade: o job usou velocidade = 60.0 [sensores/meta:job_020]"
+        ]
+      },
+      "job_021": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      },
+      "job_022": {
+        "causa": "parede",
+        "regras": [
+          "R2"
+        ],
+        "ajustes": [
+          {
+            "parametro": "resfriamento",
+            "de": 40.0,
+            "para": 60.0,
+            "regra_id": "R2"
+          }
+        ],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 1.0
+        },
+        "passos": [
+          "job:job_022 -observado_como-> estado:job_022:3: estado 'anomalia' com anomalia entre 300 e 420 s [regimes/kmeans_janelas]",
+          "estado:job_022:3 -ocorre_durante-> operacao:job_022:op2_parede: sobreposicao de 120 s com a operacao [regimes/kmeans_janelas]",
+          "operacao:job_022:op2_parede -imprime-> feature:suporte_L@v022:parede: a operacao imprime a feature 'parede' [sensores/meta:job_022]",
+          "feature:suporte_L@v022:parede -requer-> parametro:resfriamento: regra R2 exige resfriamento >= 60.0 [processo/regra:R2]",
+          "job:job_022 -usa_parametro-> parametro:resfriamento: o job usou resfriamento = 40.0 [sensores/meta:job_022]"
+        ]
+      },
+      "job_023": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      },
+      "job_024": {
+        "causa": null,
+        "regras": [],
+        "ajustes": [],
+        "tradeoffs": {
+          "tempo_pct": 0.0,
+          "material_pct": 0.0,
+          "qualidade_pontos": 0.0
+        },
+        "passos": []
+      }
+    },
+    "rotulo": "SINTETICO"
+  }
+}
