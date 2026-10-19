@@ -1,0 +1,56 @@
+{
+  "job_id": "job_014",
+  "produto_id": "suporte_L",
+  "versao_design": "v014",
+  "canais": [
+    "temperatura",
+    "corrente",
+    "vibracao"
+  ],
+  "taxa_hz": 2.0,
+  "parametros_usados": {
+    "temp_bico": 210.0,
+    "velocidade": 60.0,
+    "altura_camada": 0.2,
+    "resfriamento": 60.0,
+    "fluxo": 100.0,
+    "retracao": 5.0
+  },
+  "operacoes": [
+    {
+      "id": "op0_aquecimento",
+      "feature_id": null,
+      "inicio_s": 0.0,
+      "fim_s": 60.0,
+      "descricao": "fase aquecimento"
+    },
+    {
+      "id": "op1_base",
+      "feature_id": "base",
+      "inicio_s": 60.0,
+      "fim_s": 260.0,
+      "descricao": "fase base"
+    },
+    {
+      "id": "op2_parede",
+      "feature_id": "parede",
+      "inicio_s": 260.0,
+      "fim_s": 460.0,
+      "descricao": "fase parede"
+    },
+    {
+      "id": "op3_aba",
+      "feature_id": "aba",
+      "inicio_s": 460.0,
+      "fim_s": 560.0,
+      "descricao": "fase aba"
+    },
+    {
+      "id": "op4_resfriamento",
+      "feature_id": null,
+      "inicio_s": 560.0,
+      "fim_s": 600.0,
+      "descricao": "fase resfriamento"
+    }
+  ]
+}

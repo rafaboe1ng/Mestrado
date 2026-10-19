@@ -1,0 +1,27 @@
+[project]
+name = "mestrado-grafo-manufatura"
+version = "0.1.0"
+description = "Framework com grafo de conhecimento para reconfiguracao de processo em manufatura aditiva (mestrado de Rafael)"
+requires-python = ">=3.12"
+dependencies = ["numpy>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+  "contracts: testes dos contratos entre modulos",
+  "cad_features: modulo cad_features",
+  "processo: modulo processo",
+  "sensores: modulo sensores",
+  "regimes: modulo regimes",
+  "grafo: modulo grafo",
+  "raciocinio: modulo raciocinio",
+  "avaliacao: modulo avaliacao (regua comum)",
+  "sintetico: gerador da bateria sintetica",
+  "experimentos: proveniencia e experimentos",
+  "diagnostico: diagnostico por etapa",
+]

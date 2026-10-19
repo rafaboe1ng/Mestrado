@@ -1,0 +1,79 @@
+{
+  "produto_id": "suporte_L",
+  "versao_design": "v012",
+  "origem": "ficha_exemplo",
+  "features": [
+    {
+      "id": "base",
+      "tipo": "base",
+      "dimensoes": {
+        "comprimento_mm": 60.0,
+        "largura_mm": 40.0,
+        "espessura_mm": 3.0
+      },
+      "adjacentes": [
+        "parede",
+        "furo_a",
+        "nervura"
+      ]
+    },
+    {
+      "id": "parede",
+      "tipo": "parede",
+      "dimensoes": {
+        "altura_mm": 30.0,
+        "espessura_mm": 3.0
+      },
+      "adjacentes": [
+        "base",
+        "nervura",
+        "furo_b",
+        "aba"
+      ]
+    },
+    {
+      "id": "furo_a",
+      "tipo": "furo",
+      "dimensoes": {
+        "diametro_mm": 5.0
+      },
+      "adjacentes": [
+        "base"
+      ]
+    },
+    {
+      "id": "nervura",
+      "tipo": "nervura",
+      "dimensoes": {
+        "espessura_mm": 1.5,
+        "altura_mm": 10.0
+      },
+      "adjacentes": [
+        "base",
+        "parede"
+      ]
+    },
+    {
+      "id": "furo_b",
+      "tipo": "furo",
+      "dimensoes": {
+        "diametro_mm": 4.0
+      },
+      "adjacentes": [
+        "parede"
+      ]
+    },
+    {
+      "id": "aba",
+      "tipo": "aba",
+      "dimensoes": {
+        "comprimento_mm": 15.0,
+        "angulo_graus": 45.0,
+        "espessura_mm": 2.0
+      },
+      "adjacentes": [
+        "parede"
+      ]
+    }
+  ]
+}

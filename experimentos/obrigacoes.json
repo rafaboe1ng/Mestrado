@@ -1,0 +1,32 @@
+{
+  "declarado_em": "2026-10-19",
+  "nota": "Espelho legivel por maquina do PLANO.md. Criterios declarados antes da primeira execucao; mudanca so por ADR.",
+  "obrigacoes": [
+    {"id": "P0", "titulo": "pipeline fecha sobre os contratos", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.contratos_violados", "baseline": null, "criterio": {"tipo": "max", "valor": 0}},
+    {"id": "P1", "titulo": "grafo integra as tres fontes (cobertura)", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.grafo_cobertura_pct", "baseline": null, "criterio": {"tipo": "min", "valor": 100}},
+    {"id": "P2", "titulo": "toda aresta tem proveniencia", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.grafo_proveniencia_pct", "baseline": null, "criterio": {"tipo": "min", "valor": 100}},
+    {"id": "P3", "titulo": "anomalias por clustering vs limiar simples (sintetico)", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.anomalia_f1", "baseline": "baseline_limiar.anomalia_f1",
+     "criterio": {"tipo": "min_e_margem", "minimo": 0.70, "margem": 0.10}},
+    {"id": "P4", "titulo": "atribuicao da causa pelo grafo", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.acuracia_causa", "baseline": "baseline_geometrico.acuracia_causa",
+     "criterio": {"tipo": "min_e_margem", "minimo": 0.80, "margem": 0.15}},
+    {"id": "P5", "titulo": "ajustes viaveis", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.taxa_viavel", "baseline": "baseline_geometrico.taxa_viavel", "criterio": {"tipo": "min", "valor": 1.0}},
+    {"id": "P6", "titulo": "ajustes resolvem as regras violadas", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.taxa_resolve", "baseline": "baseline_geometrico.taxa_resolve",
+     "criterio": {"tipo": "min_e_margem", "minimo": 0.90, "margem": 0.20}},
+    {"id": "P7", "titulo": "trade-offs informados pela mesma regua", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.taxa_tradeoffs", "baseline": "baseline_geometrico.taxa_tradeoffs", "criterio": {"tipo": "min", "valor": 1.0}},
+    {"id": "P8", "titulo": "explicacao completa para toda causa atribuida", "experimento": "exp01_pipeline_sintetico",
+     "metrica": "proposto.taxa_explicacao_completa", "baseline": null, "criterio": {"tipo": "min", "valor": 1.0}},
+    {"id": "P9", "titulo": "P1-P8 com dados reais", "experimento": "exp02_dados_reais",
+     "metrica": "proposto.anomalia_f1", "baseline": "baseline_limiar.anomalia_f1",
+     "criterio": {"tipo": "a_fixar", "nota": "fixar antes da primeira coleta (ROTEIRO, fase 3)"}},
+    {"id": "P10", "titulo": "nucleo independente de dominio (desejavel)", "experimento": "exp03_segunda_base",
+     "metrica": "arquivos_alterados", "baseline": null, "criterio": {"tipo": "max", "valor": 0}}
+  ]
+}

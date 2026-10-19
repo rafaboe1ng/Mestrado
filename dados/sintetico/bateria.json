@@ -1,0 +1,128 @@
+{
+  "semente": 20261019,
+  "n_jobs": 24,
+  "n_calibracao": 8,
+  "largura_janela_s": 10.0,
+  "jobs": {
+    "job_001": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v001.json",
+      "caso": "casos/job_001"
+    },
+    "job_002": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v002.json",
+      "caso": "casos/job_002"
+    },
+    "job_003": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v003.json",
+      "caso": "casos/job_003"
+    },
+    "job_004": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v004.json",
+      "caso": "casos/job_004"
+    },
+    "job_005": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v005.json",
+      "caso": "casos/job_005"
+    },
+    "job_006": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v006.json",
+      "caso": "casos/job_006"
+    },
+    "job_007": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v007.json",
+      "caso": "casos/job_007"
+    },
+    "job_008": {
+      "conjunto": "calibracao",
+      "ficha": "fichas/suporte_L@v008.json",
+      "caso": "casos/job_008"
+    },
+    "job_009": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v009.json",
+      "caso": "casos/job_009"
+    },
+    "job_010": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v010.json",
+      "caso": "casos/job_010"
+    },
+    "job_011": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v011.json",
+      "caso": "casos/job_011"
+    },
+    "job_012": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v012.json",
+      "caso": "casos/job_012"
+    },
+    "job_013": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v013.json",
+      "caso": "casos/job_013"
+    },
+    "job_014": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v014.json",
+      "caso": "casos/job_014"
+    },
+    "job_015": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v015.json",
+      "caso": "casos/job_015"
+    },
+    "job_016": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v016.json",
+      "caso": "casos/job_016"
+    },
+    "job_017": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v017.json",
+      "caso": "casos/job_017"
+    },
+    "job_018": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v018.json",
+      "caso": "casos/job_018"
+    },
+    "job_019": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v019.json",
+      "caso": "casos/job_019"
+    },
+    "job_020": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v020.json",
+      "caso": "casos/job_020"
+    },
+    "job_021": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v021.json",
+      "caso": "casos/job_021"
+    },
+    "job_022": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v022.json",
+      "caso": "casos/job_022"
+    },
+    "job_023": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v023.json",
+      "caso": "casos/job_023"
+    },
+    "job_024": {
+      "conjunto": "avaliacao",
+      "ficha": "fichas/suporte_L@v024.json",
+      "caso": "casos/job_024"
+    }
+  }
+}

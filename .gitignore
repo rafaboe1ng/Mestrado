@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# artigos de referencia (grandes); ficam em bibliografia/, fora do versionamento
+*.pdf
+bibliografia/
