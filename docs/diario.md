@@ -15,6 +15,10 @@ Por data e autor: o que mudou e o que ficou pendente. Escrito à mão (é o úni
   Trocado por mediana + 3·MAD e exp01 rodado de novo (execução #2, repetição). Critério de P3 inalterado.
 - Observado e registrado em `docs/modulos/regimes.md`: k=4 não separa resfriamento; janela 1 de aquecimento
   vira falso positivo pelo limiar de distância.
+- **exp01 execução #2 (repetição): o baseline robusto venceu o k-means na detecção (F1 0,994 vs 0,969).**
+  P3 "não atendida" no sintético. Motivo: anomalia sintética é pico num canal só; o limiar é o detector ótimo
+  ali. Decisão registrada: não mexer no gerador; P3 se decide com dados reais. O resto (P0–P2, P4–P8) segue
+  atendido. Quadro: 8 atendidas, 1 não atendida, 2 pendentes.
 - Pendências:
   - obrigações do PLANO estão em status `proposta`; discutir e aceitar na próxima reunião;
   - calibrar k e largura de janela só nos jobs de calibração (ADR); tratar o falso positivo da janela 1;

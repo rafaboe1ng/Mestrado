@@ -32,6 +32,19 @@ Baseline: desvio da vibração por janela acima de média + 3 desvios (calibraç
     inflam média e desvio e o limiar sobe demais, perdendo revocação. Comparar o método com um baseline
     assim é fácil demais. A partir da execução #2 o baseline oficial é **mediana + 3·MAD** (`robusto=True`);
     o critério de P3 não mudou, o baseline ficou mais forte. A primeira execução fica no histórico.
+- **2026-10-19, exp01 execução #2** (`resultados/exp01_pipeline_sintetico__20261019T141826.json`, SINTÉTICO, repetição):
+  - Com o baseline robusto, **o limiar simples venceu**: F1 0,994 e pureza 0,98 contra 0,969 e 0,93 do k-means.
+    **P3 fica "não atendida" na bateria sintética.** Isso não é um bug a esconder; é a circularidade do PLANO (P3)
+    aparecendo: a anomalia sintética é um pico num único canal, então um limiar nesse canal é o detector ótimo.
+    O k-means perde precisão nos outliers de distância (janela 1 de aquecimento) e não ganha nada na detecção
+    porque não há anomalia multivariada na bateria.
+  - O que isso diz sobre o método: o valor do clustering, se existir, está em (a) anomalias que só aparecem na
+    combinação de canais, (b) estados e transições (padrões operacionais) que um limiar não dá, e (c) o mapeamento
+    desses estados para o grafo. Nada disso é testável nesta bateria. **Decisão: não ajustar o gerador para o
+    método vencer.** P3 só se decide com dados reais (P9), e a bateria sintética passa a provar só P0–P2 e a
+    exercitar P4–P8, como a ADR-002 já dizia.
+  - Melhorias legítimas no método, para testar na calibração real e não aqui: não aplicar o critério de distância à
+    fase de aquecimento; k=5; janela de 20 s; e um baseline multivariado (limiar por canal com voto) como segundo baseline.
 
 ## Pendências
 - Comparar k-means com um método de densidade quando houver dados reais (ADR-003 prevê adaptador).
