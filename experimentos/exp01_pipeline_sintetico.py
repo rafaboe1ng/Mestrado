@@ -22,7 +22,8 @@ from processo import base_fdm_pla, violacoes
 
 RAIZ = Path(__file__).resolve().parents[1]
 NOME = "exp01_pipeline_sintetico"
-CONFIG = {"largura_janela_s": 10.0, "k": 4, "semente": 0, "fator_anomalia": 2.0, "percentil_distancia": 99.0, "n_desvios_baseline": 3.0}
+CONFIG = {"largura_janela_s": 10.0, "k": 4, "semente": 0, "fator_anomalia": 2.0, "percentil_distancia": 99.0,
+          "n_desvios_baseline": 3.0, "baseline_robusto": True}
 METODOS = ("proposto", "baseline_limiar", "baseline_geometrico", "baseline_temporal")
 
 
@@ -43,7 +44,8 @@ def executar(raiz_dados: Path = RAIZ / "dados" / "sintetico", config: dict = CON
     L = config["largura_janela_s"]
     modelo = regimes.ajustar([series[j] for j in calib], largura_s=L, k=config["k"], semente=config["semente"],
                              fator_anomalia=config["fator_anomalia"], percentil_distancia=config["percentil_distancia"])
-    limiar = regimes.calibrar_limiar([series[j] for j in calib], largura_s=L, n_desvios=config["n_desvios_baseline"])
+    limiar = regimes.calibrar_limiar([series[j] for j in calib], largura_s=L, n_desvios=config["n_desvios_baseline"],
+                                     robusto=config.get("baseline_robusto", True))
 
     por_metodo: dict[str, dict] = {m: {} for m in METODOS}
     integ_prov, integ_cob, explicacoes = [], [], {}

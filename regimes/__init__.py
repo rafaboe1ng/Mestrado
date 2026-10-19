@@ -173,13 +173,22 @@ def aplicar(modelo: ModeloRegimes, serie: SerieMultivariada) -> EstadosOperacion
     return est
 
 
-def calibrar_limiar(series: list[SerieMultivariada], largura_s: float = 10.0, canal_vibracao: str = "vibracao", n_desvios: float = 3.0) -> float:
-    """Baseline: media + n desvios do desvio-padrao da vibracao por janela, nos jobs de calibracao."""
+def calibrar_limiar(series: list[SerieMultivariada], largura_s: float = 10.0, canal_vibracao: str = "vibracao",
+                    n_desvios: float = 3.0, robusto: bool = True) -> float:
+    """Baseline: limiar sobre o desvio-padrao da vibracao por janela, calibrado nos jobs de calibracao.
+
+    ``robusto=True`` usa mediana + n * MAD (escalado), que nao e inflado pelas janelas anomalas presentes
+    na calibracao. ``robusto=False`` usa media + n desvios (primeira execucao do exp01; ver docs/modulos/regimes.md).
+    """
     vals = []
     for s in series:
         _, X, nomes = caracteristicas(s, largura_s)
         vals.append(X[:, nomes.index(f"{canal_vibracao}_desvio")])
     v = np.concatenate(vals)
+    if robusto:
+        med = float(np.median(v))
+        mad = 1.4826 * float(np.median(np.abs(v - med)))
+        return med + n_desvios * mad
     return float(v.mean() + n_desvios * v.std())
 
 

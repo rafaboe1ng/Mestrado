@@ -39,8 +39,19 @@ def test_ajustar_aplicar_detecta_mais_no_job_anomalo(job_fino, job_limpo, job_es
 
 
 def test_baseline_limiar(job_fino, job_limpo):
-    limiar = calibrar_limiar([job_limpo[1]], 10.0, n_desvios=3.0)
+    limiar = calibrar_limiar([job_limpo[1]], 10.0, n_desvios=3.0, robusto=False)
     est_fino = baseline_limiar(job_fino[1], 10.0, limiar)
     est_limpo = baseline_limiar(job_limpo[1], 10.0, limiar)
     assert est_fino.validar() == [] and est_fino.metodo == "baseline_limiar_vibracao"
     assert len(est_fino.indices_anomalos()) > len(est_limpo.indices_anomalos())
+
+
+def test_limiar_robusto_nao_e_inflado_pelas_anomalias(job_fino, job_limpo):
+    # calibrando num conjunto que contem o job anomalo, media+3sd sobe; mediana+3MAD quase nao muda
+    classico = calibrar_limiar([job_fino[1], job_limpo[1]], 10.0, robusto=False)
+    robusto = calibrar_limiar([job_fino[1], job_limpo[1]], 10.0, robusto=True)
+    so_limpo = calibrar_limiar([job_limpo[1]], 10.0, robusto=True)
+    assert robusto < classico
+    assert abs(robusto - so_limpo) < abs(classico - so_limpo)
+    detectadas = baseline_limiar(job_fino[1], 10.0, robusto).indices_anomalos()
+    assert sum(1 for i in detectadas if 30 <= i <= 41) >= 10

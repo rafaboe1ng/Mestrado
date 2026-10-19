@@ -73,7 +73,10 @@ de parâmetros viáveis com trade-offs explícitos entre material, tempo e quali
   com limiar de distância) coincidem com as do gabarito mais do que um limiar sobre um único canal.
 - **Métrica**: F1 das janelas anômalas (micro, sobre os jobs de avaliação) — `proposto.anomalia_f1`;
   pureza dos estados como métrica secundária.
-- **Baseline**: `baseline_limiar.anomalia_f1` (limiar fixo sobre o desvio da vibração, calibrado nos jobs de calibração).
+- **Baseline**: `baseline_limiar.anomalia_f1` (limiar fixo sobre o desvio da vibração, calibrado nos jobs de calibração
+  como mediana + 3·MAD). Nota datada de 2026-10-19: a primeira execução usou média + 3 desvios, que as anomalias
+  da calibração inflam (F1 0,32); o baseline foi trocado pelo robusto **antes** de qualquer uso do número, sem mexer
+  no critério. Registro em `docs/modulos/regimes.md` e no diário.
 - **Aceite**: F1 ≥ baseline + 0,10 **e** F1 ≥ 0,70 na bateria sintética.
 - **Ameaça (grave)**: circularidade. O gerador sintético injeta a anomalia como pico de vibração e ondulação de
   corrente, exatamente o que ambos os métodos procuram. O resultado sintético prova que o pipeline funciona,

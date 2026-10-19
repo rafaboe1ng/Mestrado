@@ -7,8 +7,17 @@ Por data e autor: o que mudou e o que ficou pendente. Escrito à mão (é o úni
 - Criado o esqueleto no modelo "cada afirmação aponta para um arquivo que a prova": `PLANO.md` (P0–P10),
   `ROTEIRO.md`, `CONTRIBUTING.md`, contratos, módulos, bateria sintética com gabarito, exp01 com
   proveniência, testes por módulo, diagnóstico por etapa, ADR-001..003, `docs/gerar_quadro.py`.
+- Primeiro commit (`7411a66`), 39 testes passando, diagnóstico OK em `job_009`.
+- exp01 execução #1 (fora da amostra, SINTÉTICO): proposto F1 0,97 / causa 1,00 / resolve 1,00; baselines de
+  atribuição 0,81 e 0,75 na causa e 0,375 em resolver; baseline de limiar F1 0,32. Nove obrigações atendidas
+  (P0–P8), duas pendentes (P9 dados reais, P10 domínio).
+- O baseline de limiar estava fraco por construção (média + 3 desvios inflada pelas anomalias da calibração).
+  Trocado por mediana + 3·MAD e exp01 rodado de novo (execução #2, repetição). Critério de P3 inalterado.
+- Observado e registrado em `docs/modulos/regimes.md`: k=4 não separa resfriamento; janela 1 de aquecimento
+  vira falso positivo pelo limiar de distância.
 - Pendências:
   - obrigações do PLANO estão em status `proposta`; discutir e aceitar na próxima reunião;
+  - calibrar k e largura de janela só nos jobs de calibração (ADR); tratar o falso positivo da janela 1;
   - confirmar com João se GNN entra (ADR-001) e qual impressora/sensores (ROTEIRO, fase 0);
   - regras R1–R5 da base FDM/PLA sem fonte: marcar as que forem confirmadas;
   - `cad_features.extrair_de_malha` não implementada (ficha JSON por enquanto).
