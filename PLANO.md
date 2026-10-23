@@ -22,7 +22,7 @@ obrigação que a sustenta:
 
 | Frase do abstract | Módulo | Obrigação |
 |---|---|---|
-| representações fragmentadas de design, processo e dados de máquina | o problema (figura em `bibliografia/`) | — |
+| representações fragmentadas de design, processo e dados de máquina | o problema (figura-problema, fora do repositório) | — |
 | framework com grafo de conhecimento integrando features de CAD, conhecimento de processo e estados de sensores | `grafo/` (fontes: `cad_features/`, `processo/`, `regimes/`) | P1 |
 | relações explícitas entre produto, parâmetros, comportamento da máquina e objetivos; rastreabilidade | `contracts/grafo.py` (vocabulário) + proveniência | P2, P8 |
 | séries multivariadas de sensores agrupadas em padrões, transições e anomalias, mapeadas ao grafo | `sensores/`, `regimes/` | P3 |

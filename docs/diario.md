@@ -2,8 +2,18 @@
 
 Por data e autor: o que mudou e o que ficou pendente. Escrito à mão (é o único documento de `docs/` que é).
 
+## 2026-10-23 — Rafael
+- Histórico do repositório reescrito para deixar só a pesquisa: material de referência e figuras de apresentação
+  saíram de todos os commits e entraram no `.gitignore`. Os hashes gravados nas
+  execuções #1 e #2 do exp01 referem-se a commits anteriores à reescrita; o exp01 foi rodado de novo (#3,
+  repetição) para religar o resultado ao histórico atual.
+- Decisão: ontologia formal (OWL/RDF) fica fora do escopo por enquanto; o vocabulário de `contracts/grafo.py`
+  cumpre o papel de parte conceitual.
+- Pendências novas: pauta da próxima reunião; fontes para R1–R5; busca de dataset público de impressão 3D com
+  sensores; rascunho do protocolo de coleta e dos critérios de P9.
+
 ## 2026-10-19 — Rafael
-- Movido o material anterior (artigos, figura-problema, resumo das orientações) para `bibliografia/`.
+- Movido o material anterior (artigos, figura-problema, resumo das orientações) para uma pasta local fora do git.
 - Criado o esqueleto no modelo "cada afirmação aponta para um arquivo que a prova": `PLANO.md` (P0–P10),
   `ROTEIRO.md`, `CONTRIBUTING.md`, contratos, módulos, bateria sintética com gabarito, exp01 com
   proveniência, testes por módulo, diagnóstico por etapa, ADR-001..003, `docs/gerar_quadro.py`.

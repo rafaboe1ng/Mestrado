@@ -6,7 +6,7 @@ dependência entre as etapas, não o calendário.
 
 ## Fase 0 — Alinhamento (agora → próxima reunião)
 Entregas:
-- figura-problema direcionada ao artigo (`bibliografia/figura-problema-mestrado.svg`) — feita;
+- figura-problema direcionada ao artigo (fora do repositório) — feita;
 - `PLANO.md` com as obrigações P0–P10 em status `proposta`;
 - este roteiro e o esqueleto executável (fase 2) para mostrar o método de trabalho.
 Confirmar na reunião:

@@ -12,12 +12,11 @@ Leia nesta ordem:
 1. `ROTEIRO.md` — a sequência do trabalho, da próxima reunião até a defesa.
 2. `PLANO.md` — as obrigações de prova (P0–P10), com métrica, baseline e critério de aceite declarados antes do código.
 3. `CONTRIBUTING.md` — as oito regras de trabalho, em uma página.
-4. `bibliografia/O-QUE-FAZER-NO-MESTRADO.md` — o histórico das orientações recebidas (reunião, correções, artigo).
+4. `docs/diario.md` — o que mudou e o que ficou pendente, por data.
 
 ## Estrutura
 
 ```
-bibliografia/               o que existia antes do esqueleto: artigos (PDF), figura-problema, resumo das orientacoes
 contracts/            um arquivo por fronteira (produto, processo, sensores, estados, grafo, recomendacao)
 cad_features/         design -> ProdutoFeatures          docs/modulos/cad_features.md
 processo/             base de conhecimento de processo   docs/modulos/processo.md
@@ -58,4 +57,4 @@ python -m venv .venv            (ou: uv venv .venv)
 .venv/Scripts/python docs/gerar_quadro.py
 ```
 
-Os PDFs em `bibliografia/` são os artigos de referência enviados pelo João; ficam fora do git (`.gitignore`).
+Artigos de referência e figuras de apresentação ficam fora do repositório (`.gitignore`).
