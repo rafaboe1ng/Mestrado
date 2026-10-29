@@ -1,6 +1,6 @@
 # Guia do avaliador externo
 
-Gerado por `docs/gerar_quadro.py` em 2026-10-23T15:51-03:00. **Não editar à mão.**
+Gerado por `docs/gerar_quadro.py` em 2026-10-29T18:55-03:00. **Não editar à mão.**
 
 Para cada obrigação do `PLANO.md`: como reproduzir o número, onde ele está gravado e o que inspecionar à mão.
 Tudo que vem da bateria sintética leva o rótulo SINTÉTICO e não vale como evidência sobre a impressora (PLANO, P3).
@@ -132,4 +132,28 @@ Tudo que vem da bateria sintética leva o rótulo SINTÉTICO e não vale como ev
 - Reproduzir: `python -m experimentos.exp03_segunda_base` e depois `python docs/gerar_quadro.py`.
 - Número: `resultado.arquivos_alterados` em experimento `exp03_segunda_base` ainda não existe.
 - Critério declarado: ≤ 0. Status atual: **pendente**.
+
+## P11 — estados operacionais no SKL com proveniencia e ligacao a operacao/feature
+
+- Reproduzir: `python -m experimentos.exp02_framework_fdm` e depois `python docs/gerar_quadro.py`.
+- Número: `resultado.reference.estados_anomalos_ligados_pct` em `resultados/exp02_framework_fdm__20261029T185546.json`.
+- Critério declarado: ≥ 100. Status atual: **atendida**.
+
+## P12 — gate retem por evidencia a feature certa; ablacao sem sensores nao retem
+
+- Reproduzir: `python -m experimentos.exp02_framework_fdm` e depois `python docs/gerar_quadro.py`.
+- Número: `resultado.reference.acuracia_evidencia` em `resultados/exp02_framework_fdm__20261029T185546.json`. Baseline: `resultado.ablation_sensor_states.passos_retidos_por_evidencia`.
+- Critério declarado: ≥ 0.8 e baseline = 0. Status atual: **atendida**.
+
+## P13 — ajustes recomendados com proveniencia, plano aprovado inalterado
+
+- Reproduzir: `python -m experimentos.exp02_framework_fdm` e depois `python docs/gerar_quadro.py`.
+- Número: `resultado.reference.ajustes_com_proveniencia_pct` em `resultados/exp02_framework_fdm__20261029T185546.json`.
+- Critério declarado: ≥ 100. Status atual: **atendida**.
+
+## P14 — sem conhecimento, nenhum plano (injecao de falha)
+
+- Reproduzir: `python -m experimentos.exp02_framework_fdm` e depois `python docs/gerar_quadro.py`.
+- Número: `resultado.reference.testes_falha_alta_passando` em `resultados/exp02_framework_fdm__20261029T185546.json`.
+- Critério declarado: ≥ 1.0. Status atual: **atendida**.
 

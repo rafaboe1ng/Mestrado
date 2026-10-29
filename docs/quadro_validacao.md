@@ -1,6 +1,6 @@
 # Quadro de validação
 
-Gerado por `docs/gerar_quadro.py` em 2026-10-23T15:51-03:00. **Não editar à mão.** Critérios declarados em 2026-10-19 (`experimentos/obrigacoes.json`, espelho do `PLANO.md`).
+Gerado por `docs/gerar_quadro.py` em 2026-10-29T18:55-03:00. **Não editar à mão.** Critérios declarados em 2026-10-19 (`experimentos/obrigacoes.json`, espelho do `PLANO.md`).
 
 | Obrigação | Métrica | Valor | Baseline | Critério | Status | Execução | Fonte |
 |---|---|---|---|---|---|---|---|
@@ -15,10 +15,14 @@ Gerado por `docs/gerar_quadro.py` em 2026-10-23T15:51-03:00. **Não editar à m�
 | P8 explicacao completa para toda causa atribuida | `proposto.taxa_explicacao_completa` | 1.000 | — | ≥ 1.0 | **atendida** | #3 · repetição · SINTETICO | `resultados/exp01_pipeline_sintetico__20261023T155124.json` |
 | P9 P1-P8 com dados reais | `proposto.anomalia_f1` | — | — | fixar antes da primeira coleta (ROTEIRO, fase 3) | **pendente** | — | experimento `exp02_dados_reais` ainda não existe |
 | P10 nucleo independente de dominio (desejavel) | `arquivos_alterados` | — | — | ≤ 0 | **pendente** | — | experimento `exp03_segunda_base` ainda não existe |
+| P11 estados operacionais no SKL com proveniencia e ligacao a operacao/feature | `reference.estados_anomalos_ligados_pct` | 100.000 | — | ≥ 100 | **atendida** | #2 · repetição · ⚠ não commitado · SINTETICO | `resultados/exp02_framework_fdm__20261029T185546.json` |
+| P12 gate retem por evidencia a feature certa; ablacao sem sensores nao retem | `reference.acuracia_evidencia` | 1.000 | 0 | ≥ 0.8 e baseline = 0 | **atendida** | #2 · repetição · ⚠ não commitado · SINTETICO | `resultados/exp02_framework_fdm__20261029T185546.json` |
+| P13 ajustes recomendados com proveniencia, plano aprovado inalterado | `reference.ajustes_com_proveniencia_pct` | 100.000 | — | ≥ 100 | **atendida** | #2 · repetição · ⚠ não commitado · SINTETICO | `resultados/exp02_framework_fdm__20261029T185546.json` |
+| P14 sem conhecimento, nenhum plano (injecao de falha) | `reference.testes_falha_alta_passando` | 1.000 | — | ≥ 1.0 | **atendida** | #2 · repetição · ⚠ não commitado · SINTETICO | `resultados/exp02_framework_fdm__20261029T185546.json` |
 
 ## Resumo
 
-- atendida: 8
+- atendida: 12
 - não atendida: 1
 - pendente: 2
 
