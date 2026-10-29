@@ -5,3 +5,5 @@ __pycache__/
 # artigos de referencia (grandes); ficam em bibliografia/, fora do versionamento
 *.pdf
 bibliografia/
+# saidas de execucao do framework (uma pasta por configuracao); o JSON com proveniencia fica em resultados/
+runs/

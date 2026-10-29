@@ -141,6 +141,45 @@ de parâmetros viáveis com trade-offs explícitos entre material, tempo e quali
 - **Ameaça**: um só exemplo não prova generalidade. Sustenta a afirmação do artigo, não a dissertação;
   pode virar trabalho futuro com uma ADR.
 
+### P11 — Estados operacionais entram no SKL como fatos com proveniência (declarada em 2026-10-29)
+- **O que provar**: cada estado produzido pelo módulo de sensores é um indivíduo da ontologia de estados com
+  método, configuração, janelas e série de origem, e todo estado anômalo resolve por SPARQL a pelo menos uma
+  instância de operação do log; quando essa operação deposita uma feature, a ligação chega à feature.
+- **Métrica**: `reference.estados_anomalos_ligados_pct` (estados anômalos ligados a uma instância de operação,
+  contados por SPARQL sobre o grafo exportado); `estados_anomalos_com_feature_pct` é informativo.
+- **Baseline**: não se aplica (estrutural).
+- **Aceite**: 100 % nos jobs com log de operações; sem log, o pipeline retém tudo como `missing_knowledge`.
+- **Ameaça**: a ligação depende da sobreposição temporal com o log; log errado liga estado à feature errada.
+  Mitigação: P9 exige log real e dois rotuladores.
+
+### P12 — O gate retém passos com evidência anômala e só eles (declarada em 2026-10-29)
+- **O que provar**: com estados de sensores, o KEFC retém com `anomalous_operational_state` exatamente os
+  passos das features cuja deposição teve estado anômalo; na ablação `sensor_states` os mesmos passos são
+  aprovados e nenhuma outra decisão muda.
+- **Métrica**: `reference.acuracia_evidencia` (por job, o conjunto de features retidas por evidência é igual ao
+  conjunto de features cuja deposição se sobrepõe a uma anomalia injetada do gabarito; a concordância com a
+  `causa_feature` do gabarito é reportada à parte); `ablation_sensor_states.passos_retidos_por_evidencia` deve ser 0.
+- **Baseline**: `ablation_sensor_states` (pipeline sem sensores, como o do grupo).
+- **Aceite**: acurácia ≥ 0,80 e ablação com zero retenções por evidência.
+- **Ameaça**: circularidade da bateria sintética (P3). O que se prova aqui é o mecanismo do gate, não a
+  qualidade da detecção.
+
+### P13 — Toda recomendação de ajuste tem proveniência e não altera o plano aprovado (declarada em 2026-10-29)
+- **O que provar**: cada ajuste recomendado nasce de uma regra do arquivo de regras condicionada a uma classe de
+  evidência, cita a regra, as ontologias e os estados que o motivaram, e os registros de parâmetro aprovados do
+  passo continuam idênticos aos da ablação.
+- **Métrica**: `reference.ajustes_com_proveniencia_pct`; `reference.registros_parametro_iguais_a_ablacao`.
+- **Baseline**: não se aplica.
+- **Aceite**: 100 % e verdadeiro.
+- **Ameaça**: as regras de recuperação são escritas por nós, sem ensaio (ameaça transversal 3).
+
+### P14 — Sem conhecimento, nenhum plano (declarada em 2026-10-29)
+- **O que provar**: sem arquivo de regras, sem ontologia ou com o raciocinador indisponível, o pipeline falha
+  alto e não grava plano nem perfil; com um log de operações ausente, todo passo vai a `missing_knowledge`.
+- **Métrica**: testes de injeção de falha em `tests/framework/` (`testes_falha_alta_passando`).
+- **Aceite**: todos passam.
+- **Ameaça**: um teste que só verifica a exceção não prova que nada foi gravado; os testes verificam a pasta.
+
 ## Ameaças transversais
 
 1. **Dados sintéticos ↔ método**: já dito em P3. Toda tabela com dados sintéticos leva o rótulo "sintético".

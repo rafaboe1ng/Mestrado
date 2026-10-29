@@ -3,7 +3,7 @@ name = "mestrado-grafo-manufatura"
 version = "0.1.0"
 description = "Framework com grafo de conhecimento para reconfiguracao de processo em manufatura aditiva (mestrado de Rafael)"
 requires-python = ">=3.12"
-dependencies = ["numpy>=2.0"]
+dependencies = ["numpy>=2.0", "owlready2>=0.47", "rdflib>=7.0", "networkx>=3.2"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
@@ -24,4 +24,5 @@ markers = [
   "sintetico: gerador da bateria sintetica",
   "experimentos: proveniencia e experimentos",
   "diagnostico: diagnostico por etapa",
+  "framework: arquitetura do framework do grupo (KINM, SPCM, CFRM, SKL, KEFC, RAL)",
 ]

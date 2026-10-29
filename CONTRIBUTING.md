@@ -49,3 +49,9 @@ Não se editam à mão. O diário (`docs/diario.md`) é escrito à mão, por dat
 .venv/Scripts/python -m experimentos.exp01_pipeline_sintetico
 .venv/Scripts/python docs/gerar_quadro.py              # regenera quadro de validacao e guia do avaliador
 ```
+
+## 9. Dois vocabulários, uma tradução
+Os módulos de pesquisa (`contracts/`, `cad_features/`, `sensores/`, `regimes/`, ...) falam português. O pacote
+`framework/` fala o inglês do grupo (códigos de razão, status, nomes de arquivo, termos RDF), porque é o que será
+comparado e citado. A tradução acontece num único lugar por tipo (`framework/kinm.py` e `framework/spcm.py`);
+não se traduz em outro ponto.

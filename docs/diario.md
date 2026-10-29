@@ -2,6 +2,30 @@
 
 Por data e autor: o que mudou e o que ficou pendente. Escrito à mão (é o único documento de `docs/` que é).
 
+## 2026-10-29 — Rafael
+- Reunião do grupo: o artigo da conferência continua, com submissão em 13/11 e rascunho meu até 06/11; brief
+  paper (4 a 5 páginas) ou full (7 a 10), estrutura introdução, problem statement, trabalhos relacionados e
+  framework preliminar, com foco em processo e não em controle de máquina. Murillo e Leo apoiam.
+- Decisão: o código do mestrado passa a seguir a arquitetura do framework do grupo (KINM, CFRM, SKL, KEFC,
+  RAL), com o módulo de caracterização do processo por sensores encaixado nela. Primeiro o artigo, depois o
+  mestrado. O repositório do João foi lido como referência de arquitetura e convenções.
+- Restrição da máquina: sem Java, o raciocinador Pellet não roda; owlready2, rdflib e networkx instalados no venv.
+- Feito no mesmo dia: ADR-004 (alinhar à arquitetura do grupo), obrigações P11–P14 declaradas antes do código,
+  pacote `framework/` (KINM, SPCM, CFRM, SKL com cinco ontologias geradas por script e um arquivo de regras, motor de
+  encadeamento direto em Python por falta de Java, KEFC com dez condições e dois códigos novos, RAL, grafo RDF com
+  suíte de 23 consultas SPARQL), 40 testes em `tests/framework/`, `exp02_framework_fdm`.
+- **exp02 execução #1 (fora da amostra, SINTÉTICO)**: 16 jobs, 96 passos; referência retém 8 passos por evidência,
+  exatamente nas features cuja deposição sobrepõe a anomalia injetada (acurácia 1,0); ablação sem sensores aprova
+  os 96 e não retém nenhum; registros de parâmetro idênticos entre referência e ablação; 100 % dos estados anômalos
+  ligados a uma operação por SPARQL; 100 % das recomendações com regra, ontologias, estados e request; cinco injeções
+  de falha passam. Quadro: 12 atendidas, 1 não atendida (P3), 2 pendentes.
+- O que não funcionou: nomes de arquivo das ontologias não casavam com o IRI (owlready2 resolve importações pelo
+  nome); dois estados anômalos em `job_009`, um deles na fase de aquecimento sem feature (métrica de P11 ajustada
+  antes de rodar para ligação à operação). Detalhes em `docs/modulos/framework.md`.
+- Pendências: Pellet numa máquina com Java; nome do módulo e IRIs com o grupo; política de
+  `parameter_adjustment_suggested`; regras de recuperação sem fonte; rascunho do artigo até 06/11; reunião de 02/11
+  com roteiro de perguntas (fora do repositório).
+
 ## 2026-10-23 — Rafael
 - Histórico do repositório reescrito para deixar só a pesquisa: material de referência e figuras de apresentação
   saíram de todos os commits e entraram no `.gitignore`. Os hashes gravados nas

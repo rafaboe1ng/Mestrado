@@ -27,6 +27,14 @@ Entrega: `docs/revisao.md` com tabela (trabalho, o que representa, de onde vêm 
 - objetivo: provar P0–P2 e exercitar P3–P8 em ambiente controlado, sabendo da circularidade (PLANO, P3).
 Entrega: `resultados/exp01_*.json`, `docs/quadro_validacao.md`.
 
+## Fase 2b — Arquitetura do grupo e artigo de conferência (2026-10-29 → 2026-11-13)
+- o código passa a seguir a arquitetura do framework do grupo (ADR-004): pacote `framework/` com KINM, SPCM,
+  CFRM, SKL, KEFC, RAL, grafo RDF e suíte SPARQL; obrigações P11–P14; `exp02_framework_fdm`;
+- artigo de conferência: rascunho até 06/11, submissão 13/11 (introdução, problem statement, trabalhos relacionados,
+  framework preliminar, discussão do caso AM); foco em processo, não em controle de máquina;
+- reunião de 02/11: mostrar a execução, o quadro e as dúvidas de arquitetura (nomes, IRIs, política dos códigos novos).
+Entrega: `resultados/exp02_*.json`, `docs/modulos/framework.md`, rascunho do artigo (fora do repositório até a submissão).
+
 ## Fase 3 — Protocolo de dados reais, antes de coletar
 - "dicionário de sensores": canal, unidade, taxa, onde está instalado, o que mede do processo;
 - fichas de CAD das peças de teste e as variações de geometria (espessura de parede, ângulo de balanço, ...);

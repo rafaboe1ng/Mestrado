@@ -1,0 +1,50 @@
+# SKL rules for the FDM (fused deposition) case
+# =============================================
+# Single source of truth for the rule set. Parsed at runtime by framework/skl/repository.py and
+# executed either by the Python forward-chaining engine (framework/skl/rule_engine.py) or, where
+# Java is available, registered as SWRL rules for Pellet through owlready2. Nothing edits rules
+# into the saved .owl files separately from this file.
+#
+# Format: one rule per non-comment, non-blank line, `rule_id: antecedent -> consequent`, where the
+# antecedent is one or more atoms joined by ^ and the consequent is one atom. Atoms are
+# `Class(?f)` or `property(?f, Individual)`; the single variable ?f is the feature individual.
+# The rule_id is the provenance identifier recorded with every inferred value. Numeric conditions
+# (wall thinner than 1.2 mm, overhang steeper than 50 degrees, ...) are not expressible in this
+# format: the CFRM asserts the qualifier classes ThinWall, SteepOverhang, SmallHole and ThinRib
+# before reasoning, each with its own qualifier identifier (Q1..Q4), and the leaf classes are
+# disjoint so that one feature matches exactly one parameter rule.
+#
+# Entity names refer to classes and individuals in framework/skl/knowledge/*.owl.
+
+# --- Feature -> deposition operation (feature class, precedence from the operation individual) ---
+
+base_requires_base_deposition: Base(?f) -> requiresOperation(?f, BaseDepositionOp)
+wall_requires_wall_deposition: Wall(?f) -> requiresOperation(?f, WallDepositionOp)
+hole_requires_hole_deposition: Hole(?f) -> requiresOperation(?f, HoleDepositionOp)
+rib_requires_rib_deposition: Rib(?f) -> requiresOperation(?f, RibDepositionOp)
+overhang_requires_overhang_deposition: Overhang(?f) -> requiresOperation(?f, OverhangDepositionOp)
+
+# --- Material x feature class -> parameter set (one rule per disjoint leaf class) ---
+# Sources: common FDM practice, to be confirmed by trials or a cited source before P9 (PLANO).
+
+pla_base_params: Base(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_Base_Params)
+pla_standard_wall_params: StandardWall(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_StandardWall_Params)
+pla_thin_wall_params: ThinWall(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_ThinWall_Params)
+pla_standard_hole_params: StandardHole(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_StandardHole_Params)
+pla_small_hole_params: SmallHole(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_SmallHole_Params)
+pla_standard_rib_params: StandardRib(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_StandardRib_Params)
+pla_thin_rib_params: ThinRib(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_ThinRib_Params)
+pla_standard_overhang_params: StandardOverhang(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_StandardOverhang_Params)
+pla_steep_overhang_params: SteepOverhang(?f) ^ madeOfMaterial(?f, PLA) -> requiresParameterSet(?f, PLA_SteepOverhang_Params)
+
+# --- Evidence-conditioned recommendations (the sensor module's contribution) ---
+# FeatureWithAnomalousDeposition is asserted by the SPCM when an anomalous operational state overlaps
+# the operation instance that deposits the feature. The consequent is a *recommended* set: the KEFC
+# never replaces the approved parameter records with it; it opens a parameter_adjustment_suggested
+# request that carries the rule identifier and the state identifiers as evidence.
+
+thin_wall_anomaly_recovery: ThinWall(?f) ^ FeatureWithAnomalousDeposition(?f) ^ madeOfMaterial(?f, PLA) -> recommendsParameterSet(?f, PLA_ThinWall_Recovery_Params)
+standard_wall_anomaly_recovery: StandardWall(?f) ^ FeatureWithAnomalousDeposition(?f) ^ madeOfMaterial(?f, PLA) -> recommendsParameterSet(?f, PLA_Wall_Recovery_Params)
+steep_overhang_anomaly_recovery: SteepOverhang(?f) ^ FeatureWithAnomalousDeposition(?f) ^ madeOfMaterial(?f, PLA) -> recommendsParameterSet(?f, PLA_SteepOverhang_Recovery_Params)
+standard_overhang_anomaly_recovery: StandardOverhang(?f) ^ FeatureWithAnomalousDeposition(?f) ^ madeOfMaterial(?f, PLA) -> recommendsParameterSet(?f, PLA_Overhang_Recovery_Params)
+thin_rib_anomaly_recovery: ThinRib(?f) ^ FeatureWithAnomalousDeposition(?f) ^ madeOfMaterial(?f, PLA) -> recommendsParameterSet(?f, PLA_ThinRib_Recovery_Params)

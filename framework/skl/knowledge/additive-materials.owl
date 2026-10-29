@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://onto.brep.org/manufacturing/additive-materials"
+         xmlns="http://onto.brep.org/manufacturing/additive-materials#">
+
+<owl:Ontology rdf:about="http://onto.brep.org/manufacturing/additive-materials">
+  <owl:imports rdf:resource="http://onto.brep.org/manufacturing/additive-process"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#madeOfMaterial">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://onto.brep.org/manufacturing/additive-process#Feature"/>
+  <rdfs:range rdf:resource="#Material"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasRecommendedNozzleTempMin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasRecommendedNozzleTempMax">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Material">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#PLA">
+  <rdf:type rdf:resource="#Material"/>
+  <hasRecommendedNozzleTempMin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">190.0</hasRecommendedNozzleTempMin>
+  <hasRecommendedNozzleTempMax rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">230.0</hasRecommendedNozzleTempMax>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PETG">
+  <rdf:type rdf:resource="#Material"/>
+  <hasRecommendedNozzleTempMin rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">220.0</hasRecommendedNozzleTempMin>
+  <hasRecommendedNozzleTempMax rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250.0</hasRecommendedNozzleTempMax>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

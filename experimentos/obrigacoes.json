@@ -27,6 +27,18 @@
      "metrica": "proposto.anomalia_f1", "baseline": "baseline_limiar.anomalia_f1",
      "criterio": {"tipo": "a_fixar", "nota": "fixar antes da primeira coleta (ROTEIRO, fase 3)"}},
     {"id": "P10", "titulo": "nucleo independente de dominio (desejavel)", "experimento": "exp03_segunda_base",
-     "metrica": "arquivos_alterados", "baseline": null, "criterio": {"tipo": "max", "valor": 0}}
+     "metrica": "arquivos_alterados", "baseline": null, "criterio": {"tipo": "max", "valor": 0}},
+    {"id": "P11", "titulo": "estados operacionais no SKL com proveniencia e ligacao a operacao/feature", "experimento": "exp02_framework_fdm",
+     "metrica": "reference.estados_anomalos_ligados_pct", "baseline": null, "criterio": {"tipo": "min", "valor": 100},
+     "declarado_em": "2026-10-29"},
+    {"id": "P12", "titulo": "gate retem por evidencia a feature certa; ablacao sem sensores nao retem", "experimento": "exp02_framework_fdm",
+     "metrica": "reference.acuracia_evidencia", "baseline": "ablation_sensor_states.passos_retidos_por_evidencia",
+     "criterio": {"tipo": "min", "valor": 0.80, "baseline_igual_a": 0}, "declarado_em": "2026-10-29"},
+    {"id": "P13", "titulo": "ajustes recomendados com proveniencia, plano aprovado inalterado", "experimento": "exp02_framework_fdm",
+     "metrica": "reference.ajustes_com_proveniencia_pct", "baseline": null, "criterio": {"tipo": "min", "valor": 100},
+     "declarado_em": "2026-10-29"},
+    {"id": "P14", "titulo": "sem conhecimento, nenhum plano (injecao de falha)", "experimento": "exp02_framework_fdm",
+     "metrica": "reference.testes_falha_alta_passando", "baseline": null, "criterio": {"tipo": "min", "valor": 1.0},
+     "declarado_em": "2026-10-29"}
   ]
 }

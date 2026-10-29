@@ -1,0 +1,55 @@
+@prefix mfg:  <http://onto.brep.org/manufacturing#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Flat application vocabulary of the unified graph export (mirrors the group's manufacturing.ttl).
+# Classes for nodes
+mfg:Feature            a owl:Class ; rdfs:label "Product feature" .
+mfg:Operation          a owl:Class ; rdfs:label "Operation type or planned operation step" .
+mfg:ExecutedOperation  a owl:Class ; rdfs:label "Operation instance recorded by the machine's log" .
+mfg:OperationalState   a owl:Class ; rdfs:label "Operational state derived from sensor series" .
+mfg:Machine            a owl:Class .
+mfg:Material           a owl:Class .
+mfg:ManufacturingJob   a owl:Class .
+mfg:Parameter          a owl:Class .
+mfg:ParameterRecord    a owl:Class ; rdfs:label "Planned parameter value with rule provenance" .
+mfg:RecommendedAdjustment      a owl:Class ; rdfs:label "Evidence-conditioned recommendation, never applied automatically" .
+mfg:RecommendedParameterRecord a owl:Class .
+
+# Decision and structure predicates
+mfg:requires                 a owl:ObjectProperty ; rdfs:domain mfg:Feature ; rdfs:range mfg:Operation .
+mfg:instanceOfOperationType  a owl:ObjectProperty ; rdfs:domain mfg:Operation ; rdfs:range mfg:Operation .
+mfg:plannedFor               a owl:ObjectProperty ; rdfs:domain mfg:Operation ; rdfs:range mfg:Feature .
+mfg:runsOn                   a owl:ObjectProperty ; rdfs:range mfg:Machine .
+mfg:madeOf                   a owl:ObjectProperty ; rdfs:domain mfg:Feature ; rdfs:range mfg:Material .
+mfg:sequenceBefore           a owl:ObjectProperty ; rdfs:domain mfg:Operation ; rdfs:range mfg:Operation .
+mfg:executedAs               a owl:ObjectProperty ; rdfs:domain mfg:Operation ; rdfs:range mfg:ExecutedOperation .
+mfg:deposits                 a owl:ObjectProperty ; rdfs:domain mfg:ExecutedOperation ; rdfs:range mfg:Feature .
+mfg:partOfJob                a owl:ObjectProperty ; rdfs:range mfg:ManufacturingJob .
+mfg:observedDuring           a owl:ObjectProperty ; rdfs:domain mfg:OperationalState ; rdfs:range mfg:ExecutedOperation .
+mfg:observedOn               a owl:ObjectProperty ; rdfs:domain mfg:OperationalState ; rdfs:range mfg:Machine .
+mfg:observedInJob            a owl:ObjectProperty ; rdfs:domain mfg:OperationalState ; rdfs:range mfg:ManufacturingJob .
+mfg:transitionsTo            a owl:ObjectProperty ; rdfs:domain mfg:OperationalState ; rdfs:range mfg:OperationalState .
+mfg:evidences                a owl:ObjectProperty ; rdfs:domain mfg:OperationalState ; rdfs:range mfg:Feature .
+mfg:hasParameterRecord       a owl:ObjectProperty .
+mfg:hasRecommendedAdjustment a owl:ObjectProperty ; rdfs:domain mfg:Operation ; rdfs:range mfg:RecommendedAdjustment .
+mfg:hasDimension             a owl:ObjectProperty ; rdfs:domain mfg:Feature ; rdfs:range mfg:Parameter .
+mfg:evidenceState            a owl:ObjectProperty ; rdfs:range mfg:OperationalState .
+mfg:ontologySource           a owl:ObjectProperty .
+mfg:owlIndividual            a owl:ObjectProperty ; rdfs:comment "Link to the individual in the run's case ontology" .
+
+# Literal predicates
+mfg:nodeType a owl:DatatypeProperty . mfg:id a owl:DatatypeProperty . mfg:name a owl:DatatypeProperty .
+mfg:featureType a owl:DatatypeProperty . mfg:localId a owl:DatatypeProperty . mfg:mappingConfidence a owl:DatatypeProperty .
+mfg:qualifierRuleId a owl:DatatypeProperty . mfg:precedence a owl:DatatypeProperty . mfg:stepNumber a owl:DatatypeProperty .
+mfg:validationStatus a owl:DatatypeProperty . mfg:parameterSet a owl:DatatypeProperty . mfg:haltReason a owl:DatatypeProperty .
+mfg:expertRequestId a owl:DatatypeProperty . mfg:parameterName a owl:DatatypeProperty . mfg:value a owl:DatatypeProperty .
+mfg:unit a owl:DatatypeProperty . mfg:ruleId a owl:DatatypeProperty . mfg:source a owl:DatatypeProperty .
+mfg:inputFeatureId a owl:DatatypeProperty . mfg:inputFeatureType a owl:DatatypeProperty . mfg:inputMaterial a owl:DatatypeProperty .
+mfg:inputMappingConfidence a owl:DatatypeProperty . mfg:inputQualifierRuleId a owl:DatatypeProperty .
+mfg:entryId a owl:DatatypeProperty . mfg:startTime a owl:DatatypeProperty . mfg:endTime a owl:DatatypeProperty .
+mfg:stateLabel a owl:DatatypeProperty . mfg:stateKind a owl:DatatypeProperty . mfg:windowCount a owl:DatatypeProperty .
+mfg:anomalyFlag a owl:DatatypeProperty . mfg:anomalyScore a owl:DatatypeProperty . mfg:methodId a owl:DatatypeProperty .
+mfg:methodConfig a owl:DatatypeProperty . mfg:derivedFromSeries a owl:DatatypeProperty .
+mfg:parameterType a owl:DatatypeProperty . mfg:dimensionKey a owl:DatatypeProperty .

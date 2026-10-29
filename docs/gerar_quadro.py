@@ -41,6 +41,12 @@ def avaliar(crit: dict, valor, base) -> tuple[str, str]:
         return ("pendente" if valor is None else ("atendida" if valor <= crit["valor"] else "não atendida")), texto
     if t == "min":
         texto = f"≥ {crit['valor']}"
+        if "baseline_igual_a" in crit:
+            texto += f" e baseline = {crit['baseline_igual_a']}"
+            if valor is None or base is None:
+                return "pendente", texto
+            ok = valor >= crit["valor"] and base == crit["baseline_igual_a"]
+            return ("atendida" if ok else "não atendida"), texto
         return ("pendente" if valor is None else ("atendida" if valor >= crit["valor"] else "não atendida")), texto
     if t == "min_e_margem":
         texto = f"≥ {crit['minimo']} e ≥ baseline + {crit['margem']}"
