@@ -1,0 +1,750 @@
+{
+  "experimento": "exp02_framework_fdm",
+  "executado_em": "2026-10-29T18:56:19-03:00",
+  "comando": "python -m experimentos.exp02_framework_fdm",
+  "git": {
+    "commit": "50dac006b23de60e0b97c4a4349759008c66d5be",
+    "branch": "main",
+    "sujo": false,
+    "arquivos_nao_commitados": []
+  },
+  "versoes": {
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "plataforma": "Windows-11-10.0.26300-SP0"
+  },
+  "dados": {
+    "sha256": "8c11a11745ec1a451a0b8765c59db82b827780808c1f2709906226ffbc1d7f41",
+    "n_arquivos": 85,
+    "caminhos": [
+      "D:\\projects\\Mestrado\\dados\\sintetico",
+      "D:\\projects\\Mestrado\\framework\\skl\\knowledge"
+    ]
+  },
+  "execucao_numero_para_estes_dados": 3,
+  "vale_como_fora_da_amostra": false,
+  "avisos": [],
+  "resultado": {
+    "reference": {
+      "label": "reference",
+      "n_jobs": 16,
+      "reasoner": [
+        "python_forward_chaining"
+      ],
+      "skl_version": [
+        "c2cd427671e9"
+      ],
+      "steps": 96,
+      "approved_steps": 88,
+      "halt_summary": {
+        "anomalous_operational_state": 8,
+        "parameter_adjustment_suggested": 8
+      },
+      "requests_total": 16,
+      "sparql_failed": 0,
+      "ral": {
+        "handed": 88,
+        "serialised": 88,
+        "refused": 0
+      },
+      "estados_anomalos": 13,
+      "estados_anomalos_ligados_pct": 100.0,
+      "estados_anomalos_com_feature_pct": 61.53846153846154,
+      "acuracia_evidencia": 1.0,
+      "concordancia_causa_gabarito": 1.0,
+      "passos_retidos_por_evidencia": 8,
+      "ajustes_recomendados": 8,
+      "ajustes_com_proveniencia_pct": 100.0,
+      "por_job": {
+        "job_009": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_010": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_011": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_012": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_013": {
+          "retained": [
+            "aba"
+          ],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_014": {
+          "retained": [
+            "aba"
+          ],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_015": {
+          "retained": [
+            "aba"
+          ],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_016": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_017": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_018": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_019": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_020": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_021": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_022": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_023": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_024": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        }
+      },
+      "registros_parametro_iguais_a_ablacao": true,
+      "testes_falha_alta_passando": 1.0
+    },
+    "ablation_sensor_states": {
+      "label": "ablation_sensor_states",
+      "n_jobs": 16,
+      "reasoner": [
+        "python_forward_chaining"
+      ],
+      "skl_version": [
+        "c2cd427671e9"
+      ],
+      "steps": 96,
+      "approved_steps": 96,
+      "halt_summary": {},
+      "requests_total": 0,
+      "sparql_failed": 0,
+      "ral": {
+        "handed": 96,
+        "serialised": 96,
+        "refused": 0
+      },
+      "estados_anomalos": 0,
+      "estados_anomalos_ligados_pct": null,
+      "estados_anomalos_com_feature_pct": null,
+      "acuracia_evidencia": 0.5,
+      "concordancia_causa_gabarito": 0.5,
+      "passos_retidos_por_evidencia": 0,
+      "ajustes_recomendados": 0,
+      "ajustes_com_proveniencia_pct": null,
+      "por_job": {
+        "job_009": {
+          "retained": [],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_010": {
+          "retained": [],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_011": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_012": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_013": {
+          "retained": [],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_014": {
+          "retained": [],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_015": {
+          "retained": [],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_016": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_017": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_018": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_019": {
+          "retained": [],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_020": {
+          "retained": [],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_021": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_022": {
+          "retained": [],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_023": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_024": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        }
+      }
+    },
+    "reference_threshold": {
+      "label": "reference_threshold",
+      "n_jobs": 16,
+      "reasoner": [
+        "python_forward_chaining"
+      ],
+      "skl_version": [
+        "c2cd427671e9"
+      ],
+      "steps": 96,
+      "approved_steps": 88,
+      "halt_summary": {
+        "anomalous_operational_state": 8,
+        "parameter_adjustment_suggested": 8
+      },
+      "requests_total": 16,
+      "sparql_failed": 0,
+      "ral": {
+        "handed": 88,
+        "serialised": 88,
+        "refused": 0
+      },
+      "estados_anomalos": 9,
+      "estados_anomalos_ligados_pct": 100.0,
+      "estados_anomalos_com_feature_pct": 100.0,
+      "acuracia_evidencia": 1.0,
+      "concordancia_causa_gabarito": 1.0,
+      "passos_retidos_por_evidencia": 8,
+      "ajustes_recomendados": 8,
+      "ajustes_com_proveniencia_pct": 100.0,
+      "por_job": {
+        "job_009": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_010": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_011": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_012": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_013": {
+          "retained": [
+            "aba"
+          ],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_014": {
+          "retained": [
+            "aba"
+          ],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_015": {
+          "retained": [
+            "aba"
+          ],
+          "expected": [
+            "aba"
+          ],
+          "causa_gabarito": "aba",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_016": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_017": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_018": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_019": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_020": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_021": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_022": {
+          "retained": [
+            "parede"
+          ],
+          "expected": [
+            "parede"
+          ],
+          "causa_gabarito": "parede",
+          "status": {
+            "auto_approved": 5,
+            "requires_review": 1
+          },
+          "halts": {
+            "anomalous_operational_state": 1,
+            "parameter_adjustment_suggested": 1
+          }
+        },
+        "job_023": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        },
+        "job_024": {
+          "retained": [],
+          "expected": [],
+          "causa_gabarito": null,
+          "status": {
+            "auto_approved": 6
+          },
+          "halts": {}
+        }
+      },
+      "registros_parametro_iguais_a_ablacao": true
+    },
+    "injecoes_de_falha": {
+      "rules_missing": "passed",
+      "ontology_missing": "passed",
+      "rule_malformed": "passed",
+      "pellet_without_java": "passed",
+      "operation_log_missing": "passed"
+    },
+    "config": {
+      "configs": {
+        "reference": {
+          "sensor_evidence": true,
+          "spcm": {
+            "method": "kmeans_windows"
+          }
+        },
+        "ablation_sensor_states": {
+          "sensor_evidence": false
+        },
+        "reference_threshold": {
+          "sensor_evidence": true,
+          "spcm": {
+            "method": "robust_threshold"
+          }
+        }
+      },
+      "jobs_avaliacao": [
+        "job_009",
+        "job_010",
+        "job_011",
+        "job_012",
+        "job_013",
+        "job_014",
+        "job_015",
+        "job_016",
+        "job_017",
+        "job_018",
+        "job_019",
+        "job_020",
+        "job_021",
+        "job_022",
+        "job_023",
+        "job_024"
+      ],
+      "pasta_runs": "runs\\exp02"
+    },
+    "rotulo": "SINTETICO"
+  }
+}
